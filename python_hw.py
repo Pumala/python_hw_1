@@ -46,18 +46,16 @@ print (convert_c_to_f(degree)), "F"
 
 # Tip Calculator
 def get_tip(bill, rating):
-    if rating == "good":
-        percent = bill * .20
-        amount = bill + percent
-        return (percent, amount)
-    elif rating == "fair":
-        percent = bill * .15
-        amount = bill + percent
-        return (percent, amount)
-    elif rating == "bad":
-        percent = bill * .10
-        amount = bill + percent
-        return (percent, amount)
+    if rating == "good" or rating == "fair" or rating == "bad":
+        if rating == "good":
+            percent = .20
+        elif rating == "fair":
+            percent = .15
+        else:
+            percent = .10
+        tip = bill * percent
+        amount = bill + tip
+        return (tip, amount)
     else:
         return "That's not an option."
 
@@ -72,35 +70,18 @@ print "Total amount: $%.2f" % total_bill
 
 # Tip Calculator 2
 def tip_machine(bill, rating):
-    if rating == "good":
-        percent = bill * .20
-        amount = bill + percent
-        return (percent, amount)
-    elif rating == "fair":
-        percent = bill * .15
-        amount = bill + percent
-        return (percent, amount)
-    elif rating == "bad":
-        percent = bill * .10
-        amount = bill + percent
-        return (percent, amount)
+    if rating == "good" or rating == "fair" or rating == "bad":
+        if rating == "good":
+            percent = .20
+        elif rating == "fair":
+            percent = .15
+        else:
+            percent = .10
+        tip = bill * percent
+        amount = bill + tip
+        return (tip, amount)
     else:
         return "That's not an option."
-# def tip_machine(bill, rating):
-#     if rating == "good":
-#         percent = bill * .20
-#         amount = bill + percent
-#         return (percent, amount)
-#     elif rating == "fair":
-#         percent = bill * .15
-#         amount = bill + percent
-#         return (percent, amount)
-#     elif rating == "bad":
-#         percent = bill * .10
-#         amount = bill + percent
-#         return (percent, amount)
-#     else:
-#         return "That's not an option."
 
 bill = float(raw_input("Total bill amount? "))
 rating = raw_input("Level of service? ")
