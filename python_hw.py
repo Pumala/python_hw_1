@@ -41,8 +41,8 @@ def convert_c_to_f(degree):
     return degree * 1.8 + 32
 
 degree = float(raw_input("Temperature in C? "))
-
-print str(convert_c_to_f(degree)) + " F"
+print (convert_c_to_f(degree)), "F"
+# print str(convert_c_to_f(degree)) + " F"
 
 # Tip Calculator
 def get_tip(bill, rating):
@@ -86,6 +86,21 @@ def tip_machine(bill, rating):
         return (percent, amount)
     else:
         return "That's not an option."
+# def tip_machine(bill, rating):
+#     if rating == "good":
+#         percent = bill * .20
+#         amount = bill + percent
+#         return (percent, amount)
+#     elif rating == "fair":
+#         percent = bill * .15
+#         amount = bill + percent
+#         return (percent, amount)
+#     elif rating == "bad":
+#         percent = bill * .10
+#         amount = bill + percent
+#         return (percent, amount)
+#     else:
+#         return "That's not an option."
 
 bill = float(raw_input("Total bill amount? "))
 rating = raw_input("Level of service? ")
